@@ -1,0 +1,63 @@
+<html>
+    
+    <head>
+    <link href="pathgen.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Dosis|Exo+2|Rajdhani" rel="stylesheet">
+    <script src="FileSaver.js"></script>
+    <script src="pathgen.js"></script>
+    <script type="text/javascript">
+		
+    </script>
+    </head>
+    <body onLoad="init()" >
+  
+  
+  		<div id="header">
+            <div id="headingtext">
+        		Pathgen WebApp
+            </div>
+        </div>
+      
+      	<div id="placeholder">
+            <div id="buttonWrapper">
+                
+                <label class="input-label">
+                    <input type="button" id="btn" class="savebtn" onClick="save()" class="btn">
+                    <br/>
+                    Save
+                </label>
+               
+            </div>
+            <div id="buttonWrapper">
+            	<label class="input-label">
+                	<input type="button" id="btn" class="clearbtn" onClick="erase()" class="btn">
+                	<br/>
+                    Clear
+                </label>
+            </div>
+    	</div>
+        
+  		<div >
+            <div id="ImageWrapper">
+                <canvas id="can" width="800" height="400">
+                </canvas>
+            </div>
+            <div id="ImageWrapper">
+                <img id="canvasimg">
+            </div>
+        </div>
+     
+        <!--
+        <div id="black" onclick="color(this)">
+        </div>
+        -->
+        <!--
+        <div style="position:absolute;top:20%;left:43%;">Eraser</div>
+        <div id="white" onclick="color(this)"></div>
+        
+        -->
+    <div id="footer">
+    	Developed by Rahul Kumar Bhadani
+    </div>
+    </body>
+    </html>
