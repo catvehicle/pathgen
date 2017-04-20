@@ -1,4 +1,4 @@
-var canvas, ctx, flag = false,
+		var canvas, ctx, flag = false,
 			startX = 0,
 			startY = 0,
 			prevX = 0,
@@ -317,7 +317,19 @@ var canvas, ctx, flag = false,
 			}
             var content = '';
 			content = content.concat(count.toString()).concat('|').concat(xContent).concat('|').concat(yContent).concat('|').concat(phiContent).concat('|');
-            
-			var blob = new Blob([content], {type: "text/plain;charset=ISO-8859-1"});
-			saveAs(blob, "path.m");
+            if(content.length > 32000)
+            {
+                var r = confirm("Content of generated file exceeds 32000 characters. Do you still want to save it? Press Okay to save, otherwise Cancel");
+                if(r == true)
+                {
+			        var blob = new Blob([content], {type: "text/plain;charset=ISO-8859-1"});
+	    		    saveAs(blob, "path.m");
+                }
+            }
+            else
+            {
+			    var blob = new Blob([content], {type: "text/plain;charset=ISO-8859-1"});
+			    saveAs(blob, "path.m");
+            }
 		}
+
